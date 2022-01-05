@@ -1,8 +1,8 @@
 {
-  "name": "RealListParser",
+  "name": "reallistparser",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "watch": "tsc -w",
     "start": "node dist/src/index.js"
