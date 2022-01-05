@@ -1,0 +1,21 @@
+{
+  "name": "RealListParser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "start": "node dist/src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/moment": "^2.13.0",
+    "axios": "^0.24.0",
+    "moment": "^2.29.1",
+    "node-html-parser": "^5.2.0",
+    "typescript": "^4.5.4"
+  }
+}
