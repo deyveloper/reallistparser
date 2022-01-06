@@ -97,8 +97,10 @@ class Parser {
         } = {};
 
         for (let linkElement of linkElements) {
-            links[linkElement.getAttribute('href') || ''] = {
-                name: linkElement.innerText
+            if (!links[linkElement.getAttribute('href') || '']) {
+                links[linkElement.getAttribute('href') || ''] = {
+                    name: linkElement.innerText
+                };
             }
         }
 
@@ -405,10 +407,10 @@ class Parser {
 //     await fs.writeFile(filename, stringified, () => null);
 // };
 
-// let p = new Parser({});
+let p = new Parser({});
 
 // (async () => {
-//     // console.log(p.getItemInfo({ itemId: '15592481' }));
+//     console.log(await p.getItemInfo({ itemId: '17006897' }));
 //     // for (let i = 0; i < 10; i++) {
 //     //     data = { ...await p.getHompageLinks(), ...data };
 //     // }

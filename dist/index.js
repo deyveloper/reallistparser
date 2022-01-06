@@ -79,9 +79,11 @@ class Parser {
             const linkElements = parsedHtml.querySelectorAll('.gl > a, .dl > a');
             const links = {};
             for (let linkElement of linkElements) {
-                links[linkElement.getAttribute('href') || ''] = {
-                    name: linkElement.innerText
-                };
+                if (!links[linkElement.getAttribute('href') || '']) {
+                    links[linkElement.getAttribute('href') || ''] = {
+                        name: linkElement.innerText
+                    };
+                }
             }
             return links;
         });
@@ -289,9 +291,9 @@ class Parser {
 //     const stringified = JSON.stringify(data, null, 4);
 //     await fs.writeFile(filename, stringified, () => null);
 // };
-// let p = new Parser({});
+let p = new Parser({});
 // (async () => {
-//     // console.log(p.getItemInfo({ itemId: '15592481' }));
+//     console.log(await p.getItemInfo({ itemId: '17006897' }));
 //     // for (let i = 0; i < 10; i++) {
 //     //     data = { ...await p.getHompageLinks(), ...data };
 //     // }
