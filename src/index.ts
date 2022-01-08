@@ -256,7 +256,7 @@ class Parser {
 
     private _getFooterInfo(parsedHtml: HTMLElement): {
         datePosted: moment.Moment,
-        renewed: moment.Moment,
+        renewed?: moment.Moment,
     } {
         const footer = parsedHtml.querySelector('.footer');
         const datePostedElement = footer
