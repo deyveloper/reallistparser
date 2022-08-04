@@ -238,7 +238,7 @@ class Parser {
         return __awaiter(this, void 0, void 0, function* () {
             const callElement = parsedHtml.querySelector('.phone > a');
             const callOnClick = (callElement === null || callElement === void 0 ? void 0 : callElement.getAttribute('onclick')) || '';
-            const authorMatch = callOnClick === null || callOnClick === void 0 ? void 0 : callOnClick.match(/(?<=(Call','))\/[^.]*'/g);
+            const authorMatch = callOnClick === null || callOnClick === void 0 ? void 0 : callOnClick.match(/\/[^.]*'/g);
             const authorUrl = ((authorMatch
                 && ((_a = authorMatch[0]) === null || _a === void 0 ? void 0 : _a.replace('\'', '')))
                 || [][0]) || '/';

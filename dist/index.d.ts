@@ -57,7 +57,7 @@ declare class Parser {
         };
         footer: {
             datePosted: moment.Moment;
-            renewed: moment.Moment;
+            renewed?: moment.Moment | undefined;
         };
         categories: {
             categories: string[];

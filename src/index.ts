@@ -328,7 +328,7 @@ class Parser {
 
         const callOnClick = callElement?.getAttribute('onclick') || '';
         const authorMatch = callOnClick
-            ?.match(/(?<=(Call','))\/[^.]*'/g);
+            ?.match(/\/[^.]*'/g);
 
         const authorUrl = (
             (authorMatch
